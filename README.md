@@ -8,11 +8,19 @@ Install
 
 Start by adding the gem to your existing Rails 3.x application's Gemfile
 
-    gem 'rails_temporary_data', :git => 'git://github.com/vlado/rails_temporary_data.git'
+  gem 'rails_temporary_data', :git => 'git://github.com/vlado/rails_temporary_data.git'
 
 Update your bundle
 
-    bundle install
+  bundle install
+    
+Generate migration
+
+  rails generate rails_temporary_data
+  
+Run migration
+
+  rake db:migrate
     
 Example
 -------
