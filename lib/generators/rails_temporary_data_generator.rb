@@ -4,6 +4,10 @@ require 'rails/generators/migration'
 class RailsTemporaryDataGenerator < Rails::Generators::Base
   include Rails::Generators::Migration
   
+  def self.source_root
+    @source_root ||= File.join(File.dirname(__FILE__), 'templates')
+  end
+  
   def self.next_migration_number(dirname)
     if ActiveRecord::Base.timestamped_migrations
       Time.new.utc.strftime("%Y%m%d%H%M%S")
