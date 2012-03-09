@@ -9,3 +9,5 @@ end
 
 desc "Run tests"
 task :default => :test
+
+load "tasks/rails_temporary_data.rake"

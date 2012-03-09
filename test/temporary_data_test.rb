@@ -20,24 +20,41 @@ class TemporaryDataTest < ActiveSupport::TestCase
     assert_equal expires_at, tmp_data.expires_at 
   end
   
-  test "it should return only not expired data by default" do
-    tmp_data_1 = TemporaryData.create(:data => {}, :expires_at => Time.current + 1.second)
-    tmp_data_2 = TemporaryData.create(:data => {}, :expires_at => Time.current + 1.hour)
+  test "it should return all data (including expired) when no scope is defined" do
+    tmp_data_1 = TemporaryData.create(:data => { :tmp_data => 1 }, :expires_at => Time.current + 1.second)
+    tmp_data_2 = TemporaryData.create(:data => { :tmp_data => 2 }, :expires_at => Time.current + 1.hour)
     sleep 1 # wait for 1 second so tmp_data_1 expires
-    
     tmp_data = TemporaryData.all
+    assert tmp_data.include?(tmp_data_2)
+    assert tmp_data.include?(tmp_data_1)
+  end
+  
+  test "not_expired scope should return only not expired data by default" do
+    tmp_data_1 = TemporaryData.create(:data => { :tmp_data => 1 }, :expires_at => Time.current + 1.second)
+    tmp_data_2 = TemporaryData.create(:data => { :tmp_data => 2 }, :expires_at => Time.current + 1.hour)
+    sleep 1 # wait for 1 second so tmp_data_1 expires
+    tmp_data = TemporaryData.not_expired.all
     assert tmp_data.include?(tmp_data_2)
     assert !tmp_data.include?(tmp_data_1)
   end
-  
-  test "it should return all data (including expired) when unscoped" do
-    tmp_data_1 = TemporaryData.create(:data => {}, :expires_at => Time.current + 1.second)
-    tmp_data_2 = TemporaryData.create(:data => {}, :expires_at => Time.current + 1.hour)
+  # 
+  test "expired scope should return expired data when no scope is defined" do
+    tmp_data_1 = TemporaryData.create(:data => { :tmp_data => 1 }, :expires_at => Time.current + 1.second)
+    tmp_data_2 = TemporaryData.create(:data => { :tmp_data => 2 }, :expires_at => Time.current + 1.hour)
     sleep 1 # wait for 1 second so tmp_data_1 expires
+    tmp_data = TemporaryData.expired.all
+    assert !tmp_data.include?(tmp_data_2)
+    assert tmp_data.include?(tmp_data_1)
+  end
+  
+  test "delete_expired method should delete all temporary data with expires_at field in the past" do
+    tmp_data_1 = TemporaryData.create(:data => { :tmp_data => 1 }, :expires_at => Time.current + 1.second)
+    tmp_data_2 = TemporaryData.create(:data => { :tmp_data => 2 }, :expires_at => Time.current + 1.hour)
+    assert_equal 2, TemporaryData.unscoped.count
     
-    unscoped_tmp_data = TemporaryData.unscoped.all
-    assert unscoped_tmp_data.include?(tmp_data_2)
-    assert unscoped_tmp_data.include?(tmp_data_1)
+    sleep 1 # wait for 1 second so tmp_data_1 expires
+    TemporaryData.delete_expired
+    assert_equal [tmp_data_2], TemporaryData.all
   end
   
 end
