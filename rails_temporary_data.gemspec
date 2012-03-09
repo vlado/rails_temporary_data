@@ -19,6 +19,8 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
 
   # specify any dependencies here; for example:
-  s.add_development_dependency "rake"
-  # s.add_runtime_dependency "rest-client"
+  s.add_development_dependency("rake")
+  s.add_development_dependency("sqlite3")
+  
+  s.add_dependency("rails")
 end

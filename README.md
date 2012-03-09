@@ -31,7 +31,6 @@ Coming soon
 TODO
 ----
 
-* Tests
 * Rake task to remove expired data
 * Controller helpers
 * Publish gem
