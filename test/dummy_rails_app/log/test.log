@@ -2577,3 +2577,187 @@ Migrating to CreateTemporaryData (20120309215634)
   [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
   [1m[35mTemporaryData Load (0.1ms)[0m  SELECT "temporary_data".* FROM "temporary_data" WHERE (expires_at > '2012-03-09 22:58:21.468161')
   [1m[36m (0.7ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateTemporaryData (20120309215634)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Fri, 09 Mar 2012 23:03:48 UTC +00:00], ["data", "--- \n:last_name: Cingel\n:first_name: Vlado\n"], ["expires_at", Sun, 11 Mar 2012 23:03:48 UTC +00:00], ["updated_at", Fri, 09 Mar 2012 23:03:48 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Fri, 09 Mar 2012 23:03:48 UTC +00:00], ["data", "--- \n:tmp_data: 1\n"], ["expires_at", Fri, 09 Mar 2012 23:03:49 UTC +00:00], ["updated_at", Fri, 09 Mar 2012 23:03:48 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Fri, 09 Mar 2012 23:03:48 UTC +00:00], ["data", "--- \n:tmp_data: 2\n"], ["expires_at", Sat, 10 Mar 2012 00:03:48 UTC +00:00], ["updated_at", Fri, 09 Mar 2012 23:03:48 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "temporary_data" 
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "temporary_data" WHERE (expires_at < '2012-03-09 23:03:49.991874')[0m
+  [1m[35mTemporaryData Load (0.0ms)[0m  SELECT "temporary_data".* FROM "temporary_data" 
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Fri, 09 Mar 2012 23:03:49 UTC +00:00], ["data", "--- \n:tmp_data: 1\n"], ["expires_at", Fri, 09 Mar 2012 23:03:50 UTC +00:00], ["updated_at", Fri, 09 Mar 2012 23:03:49 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Fri, 09 Mar 2012 23:03:49 UTC +00:00], ["data", "--- \n:tmp_data: 2\n"], ["expires_at", Sat, 10 Mar 2012 00:03:49 UTC +00:00], ["updated_at", Fri, 09 Mar 2012 23:03:49 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mTemporaryData Load (0.1ms)[0m  [1mSELECT "temporary_data".* FROM "temporary_data" WHERE (expires_at < '2012-03-09 23:03:50.998141')[0m
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Fri, 09 Mar 2012 23:03:51 UTC +00:00], ["data", "--- {}\n\n"], ["expires_at", Sat, 10 Mar 2012 04:03:50 UTC +00:00], ["updated_at", Fri, 09 Mar 2012 23:03:51 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Fri, 09 Mar 2012 23:03:51 UTC +00:00], ["data", "--- {}\n\n"], ["expires_at", Sun, 11 Mar 2012 23:03:51 UTC +00:00], ["updated_at", Fri, 09 Mar 2012 23:03:51 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Fri, 09 Mar 2012 23:03:51 UTC +00:00], ["data", "--- {}\n\n"], ["expires_at", Sun, 11 Mar 2012 23:03:51 UTC +00:00], ["updated_at", Fri, 09 Mar 2012 23:03:51 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Fri, 09 Mar 2012 23:03:51 UTC +00:00], ["data", "--- \n:tmp_data: 1\n"], ["expires_at", Fri, 09 Mar 2012 23:03:52 UTC +00:00], ["updated_at", Fri, 09 Mar 2012 23:03:51 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Fri, 09 Mar 2012 23:03:51 UTC +00:00], ["data", "--- \n:tmp_data: 2\n"], ["expires_at", Sat, 10 Mar 2012 00:03:51 UTC +00:00], ["updated_at", Fri, 09 Mar 2012 23:03:51 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mTemporaryData Load (0.1ms)[0m  [1mSELECT "temporary_data".* FROM "temporary_data" [0m
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Fri, 09 Mar 2012 23:03:52 UTC +00:00], ["data", "--- \n:tmp_data: 1\n"], ["expires_at", Fri, 09 Mar 2012 23:03:53 UTC +00:00], ["updated_at", Fri, 09 Mar 2012 23:03:52 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Fri, 09 Mar 2012 23:03:52 UTC +00:00], ["data", "--- \n:tmp_data: 2\n"], ["expires_at", Sat, 10 Mar 2012 00:03:52 UTC +00:00], ["updated_at", Fri, 09 Mar 2012 23:03:52 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mTemporaryData Load (0.1ms)[0m  SELECT "temporary_data".* FROM "temporary_data" WHERE (expires_at > '2012-03-09 23:03:53.014056')
+  [1m[36m (1.1ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateTemporaryData (20120309215634)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.7ms)[0m  INSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Fri, 09 Mar 2012 23:04:08 UTC +00:00], ["data", "--- \n:last_name: Cingel\n:first_name: Vlado\n"], ["expires_at", Sun, 11 Mar 2012 23:04:08 UTC +00:00], ["updated_at", Fri, 09 Mar 2012 23:04:08 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Fri, 09 Mar 2012 23:04:08 UTC +00:00], ["data", "--- \n:tmp_data: 1\n"], ["expires_at", Fri, 09 Mar 2012 23:04:09 UTC +00:00], ["updated_at", Fri, 09 Mar 2012 23:04:08 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Fri, 09 Mar 2012 23:04:08 UTC +00:00], ["data", "--- \n:tmp_data: 2\n"], ["expires_at", Sat, 10 Mar 2012 00:04:08 UTC +00:00], ["updated_at", Fri, 09 Mar 2012 23:04:08 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "temporary_data" 
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "temporary_data" WHERE (expires_at < '2012-03-09 23:04:09.103024')[0m
+  [1m[35mTemporaryData Load (0.0ms)[0m  SELECT "temporary_data".* FROM "temporary_data" 
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Fri, 09 Mar 2012 23:04:09 UTC +00:00], ["data", "--- \n:tmp_data: 1\n"], ["expires_at", Fri, 09 Mar 2012 23:04:10 UTC +00:00], ["updated_at", Fri, 09 Mar 2012 23:04:09 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Fri, 09 Mar 2012 23:04:09 UTC +00:00], ["data", "--- \n:tmp_data: 2\n"], ["expires_at", Sat, 10 Mar 2012 00:04:09 UTC +00:00], ["updated_at", Fri, 09 Mar 2012 23:04:09 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mTemporaryData Load (0.1ms)[0m  [1mSELECT "temporary_data".* FROM "temporary_data" WHERE (expires_at < '2012-03-09 23:04:10.109266')[0m
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Fri, 09 Mar 2012 23:04:10 UTC +00:00], ["data", "--- {}\n\n"], ["expires_at", Sat, 10 Mar 2012 04:04:10 UTC +00:00], ["updated_at", Fri, 09 Mar 2012 23:04:10 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Fri, 09 Mar 2012 23:04:10 UTC +00:00], ["data", "--- {}\n\n"], ["expires_at", Sun, 11 Mar 2012 23:04:10 UTC +00:00], ["updated_at", Fri, 09 Mar 2012 23:04:10 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Fri, 09 Mar 2012 23:04:10 UTC +00:00], ["data", "--- {}\n\n"], ["expires_at", Sun, 11 Mar 2012 23:04:10 UTC +00:00], ["updated_at", Fri, 09 Mar 2012 23:04:10 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Fri, 09 Mar 2012 23:04:10 UTC +00:00], ["data", "--- \n:tmp_data: 1\n"], ["expires_at", Fri, 09 Mar 2012 23:04:11 UTC +00:00], ["updated_at", Fri, 09 Mar 2012 23:04:10 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Fri, 09 Mar 2012 23:04:10 UTC +00:00], ["data", "--- \n:tmp_data: 2\n"], ["expires_at", Sat, 10 Mar 2012 00:04:10 UTC +00:00], ["updated_at", Fri, 09 Mar 2012 23:04:10 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mTemporaryData Load (0.1ms)[0m  [1mSELECT "temporary_data".* FROM "temporary_data" [0m
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Fri, 09 Mar 2012 23:04:11 UTC +00:00], ["data", "--- \n:tmp_data: 1\n"], ["expires_at", Fri, 09 Mar 2012 23:04:12 UTC +00:00], ["updated_at", Fri, 09 Mar 2012 23:04:11 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Fri, 09 Mar 2012 23:04:11 UTC +00:00], ["data", "--- \n:tmp_data: 2\n"], ["expires_at", Sat, 10 Mar 2012 00:04:11 UTC +00:00], ["updated_at", Fri, 09 Mar 2012 23:04:11 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mTemporaryData Load (0.1ms)[0m  SELECT "temporary_data".* FROM "temporary_data" WHERE (expires_at > '2012-03-09 23:04:12.124741')
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateTemporaryData (20120309215634)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.7ms)[0m  INSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Fri, 09 Mar 2012 23:05:15 UTC +00:00], ["data", "--- \n:last_name: Cingel\n:first_name: Vlado\n"], ["expires_at", Sun, 11 Mar 2012 23:05:15 UTC +00:00], ["updated_at", Fri, 09 Mar 2012 23:05:15 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Fri, 09 Mar 2012 23:05:15 UTC +00:00], ["data", "--- \n:tmp_data: 1\n"], ["expires_at", Fri, 09 Mar 2012 23:05:16 UTC +00:00], ["updated_at", Fri, 09 Mar 2012 23:05:15 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Fri, 09 Mar 2012 23:05:15 UTC +00:00], ["data", "--- \n:tmp_data: 2\n"], ["expires_at", Sat, 10 Mar 2012 00:05:15 UTC +00:00], ["updated_at", Fri, 09 Mar 2012 23:05:15 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "temporary_data" 
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "temporary_data" WHERE (expires_at < '2012-03-09 23:05:16.528488')[0m
+  [1m[35mTemporaryData Load (0.0ms)[0m  SELECT "temporary_data".* FROM "temporary_data" 
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Fri, 09 Mar 2012 23:05:16 UTC +00:00], ["data", "--- \n:tmp_data: 1\n"], ["expires_at", Fri, 09 Mar 2012 23:05:17 UTC +00:00], ["updated_at", Fri, 09 Mar 2012 23:05:16 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Fri, 09 Mar 2012 23:05:16 UTC +00:00], ["data", "--- \n:tmp_data: 2\n"], ["expires_at", Sat, 10 Mar 2012 00:05:16 UTC +00:00], ["updated_at", Fri, 09 Mar 2012 23:05:16 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mTemporaryData Load (0.1ms)[0m  [1mSELECT "temporary_data".* FROM "temporary_data" WHERE (expires_at < '2012-03-09 23:05:17.534137')[0m
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Fri, 09 Mar 2012 23:05:17 UTC +00:00], ["data", "--- {}\n\n"], ["expires_at", Sat, 10 Mar 2012 04:05:17 UTC +00:00], ["updated_at", Fri, 09 Mar 2012 23:05:17 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Fri, 09 Mar 2012 23:05:17 UTC +00:00], ["data", "--- {}\n\n"], ["expires_at", Sun, 11 Mar 2012 23:05:17 UTC +00:00], ["updated_at", Fri, 09 Mar 2012 23:05:17 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Fri, 09 Mar 2012 23:05:17 UTC +00:00], ["data", "--- {}\n\n"], ["expires_at", Sun, 11 Mar 2012 23:05:17 UTC +00:00], ["updated_at", Fri, 09 Mar 2012 23:05:17 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Fri, 09 Mar 2012 23:05:17 UTC +00:00], ["data", "--- \n:tmp_data: 1\n"], ["expires_at", Fri, 09 Mar 2012 23:05:18 UTC +00:00], ["updated_at", Fri, 09 Mar 2012 23:05:17 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Fri, 09 Mar 2012 23:05:17 UTC +00:00], ["data", "--- \n:tmp_data: 2\n"], ["expires_at", Sat, 10 Mar 2012 00:05:17 UTC +00:00], ["updated_at", Fri, 09 Mar 2012 23:05:17 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mTemporaryData Load (0.1ms)[0m  [1mSELECT "temporary_data".* FROM "temporary_data" [0m
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Fri, 09 Mar 2012 23:05:18 UTC +00:00], ["data", "--- \n:tmp_data: 1\n"], ["expires_at", Fri, 09 Mar 2012 23:05:19 UTC +00:00], ["updated_at", Fri, 09 Mar 2012 23:05:18 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Fri, 09 Mar 2012 23:05:18 UTC +00:00], ["data", "--- \n:tmp_data: 2\n"], ["expires_at", Sat, 10 Mar 2012 00:05:18 UTC +00:00], ["updated_at", Fri, 09 Mar 2012 23:05:18 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mTemporaryData Load (0.1ms)[0m  SELECT "temporary_data".* FROM "temporary_data" WHERE (expires_at > '2012-03-09 23:05:19.549929')
+  [1m[36mTemporaryData Load (0.0ms)[0m  [1mSELECT "temporary_data".* FROM "temporary_data" WHERE (expires_at > '2012-03-09 23:05:19.550722')[0m
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Fri, 09 Mar 2012 23:05:19 UTC +00:00], ["data", "--- \n:tmp_data: 1\n"], ["expires_at", Fri, 09 Mar 2012 23:05:20 UTC +00:00], ["updated_at", Fri, 09 Mar 2012 23:05:19 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Fri, 09 Mar 2012 23:05:19 UTC +00:00], ["data", "--- \n:tmp_data: 2\n"], ["expires_at", Sat, 10 Mar 2012 00:05:19 UTC +00:00], ["updated_at", Fri, 09 Mar 2012 23:05:19 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mTemporaryData Load (0.1ms)[0m  SELECT "temporary_data".* FROM "temporary_data" WHERE (expires_at > '2012-03-09 23:05:20.554992')
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m

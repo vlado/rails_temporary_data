@@ -29,15 +29,23 @@ class TemporaryDataTest < ActiveSupport::TestCase
     assert tmp_data.include?(tmp_data_1)
   end
   
-  test "not_expired scope should return only not expired data by default" do
+  test "unexpired scope should return only not expired data by default" do
     tmp_data_1 = TemporaryData.create(:data => { :tmp_data => 1 }, :expires_at => Time.current + 1.second)
     tmp_data_2 = TemporaryData.create(:data => { :tmp_data => 2 }, :expires_at => Time.current + 1.hour)
     sleep 1 # wait for 1 second so tmp_data_1 expires
-    tmp_data = TemporaryData.not_expired.all
+    tmp_data = TemporaryData.unexpired.all
     assert tmp_data.include?(tmp_data_2)
     assert !tmp_data.include?(tmp_data_1)
   end
-  # 
+  
+  test "not_expired as alias for unexpired" do
+    tmp_data_1 = TemporaryData.create(:data => { :tmp_data => 1 }, :expires_at => Time.current + 1.second)
+    tmp_data_2 = TemporaryData.create(:data => { :tmp_data => 2 }, :expires_at => Time.current + 1.hour)
+    sleep 1 # wait for 1 second so tmp_data_1 expires
+    
+    assert_equal TemporaryData.unexpired.all, TemporaryData.not_expired.all
+  end
+  
   test "expired scope should return expired data when no scope is defined" do
     tmp_data_1 = TemporaryData.create(:data => { :tmp_data => 1 }, :expires_at => Time.current + 1.second)
     tmp_data_2 = TemporaryData.create(:data => { :tmp_data => 2 }, :expires_at => Time.current + 1.hour)
