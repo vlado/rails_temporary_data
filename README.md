@@ -6,7 +6,7 @@ Rails engine to simply save temporary data that is too big for session in databa
 Install
 -------
 
-Start by adding the gem to your existing Rails 3.x application's Gemfile
+Start by adding the gem to your application's Gemfile
 
   gem 'rails_temporary_data', :git => 'git://github.com/vlado/rails_temporary_data.git'
 
@@ -34,3 +34,4 @@ TODO
 * Tests
 * Rake task to remove expired data
 * Controller helpers
+* Publish gem
