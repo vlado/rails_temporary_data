@@ -8,8 +8,8 @@ Gem::Specification.new do |s|
   s.authors     = ["Vlado Cingel"]
   s.email       = ["vladocingel@gmail.com"]
   s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
+  s.summary     = %q{Rails engine to simply save temporary data that is too big for session in database}
+  s.description = %q{Rails engine to simply save temporary data that is too big for session in database}
 
   s.rubyforge_project = "rails_temporary_data"
 
