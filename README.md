@@ -35,3 +35,4 @@ TODO
 * Rake task to remove expired data
 * Controller helpers
 * Publish gem
+* Default expires_at as configuration option
