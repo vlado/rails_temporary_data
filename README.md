@@ -31,6 +31,5 @@ Coming soon
 TODO
 ----
 
-* Controller helpers
 * Publish gem
 * Default expires_at as configuration option
