@@ -2761,3 +2761,828 @@ Migrating to CreateTemporaryData (20120309215634)
   [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
   [1m[35mTemporaryData Load (0.1ms)[0m  SELECT "temporary_data".* FROM "temporary_data" WHERE (expires_at > '2012-03-09 23:05:20.554992')
   [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateTemporaryData (20120309215634)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.8ms)[0m  INSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Fri, 09 Mar 2012 23:24:45 UTC +00:00], ["data", "--- \n:first_name: Vlado\n:last_name: Cingel\n"], ["expires_at", Sun, 11 Mar 2012 23:24:45 UTC +00:00], ["updated_at", Fri, 09 Mar 2012 23:24:45 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Fri, 09 Mar 2012 23:24:45 UTC +00:00], ["data", "--- \n:tmp_data: 1\n"], ["expires_at", Fri, 09 Mar 2012 23:24:46 UTC +00:00], ["updated_at", Fri, 09 Mar 2012 23:24:45 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Fri, 09 Mar 2012 23:24:45 UTC +00:00], ["data", "--- \n:tmp_data: 2\n"], ["expires_at", Sat, 10 Mar 2012 00:24:45 UTC +00:00], ["updated_at", Fri, 09 Mar 2012 23:24:45 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "temporary_data" 
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "temporary_data" WHERE (expires_at < '2012-03-09 23:24:46.414159')[0m
+  [1m[35mTemporaryData Load (0.0ms)[0m  SELECT "temporary_data".* FROM "temporary_data" 
+  [1m[36m (0.7ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Fri, 09 Mar 2012 23:24:46 UTC +00:00], ["data", "--- \n:tmp_data: 1\n"], ["expires_at", Fri, 09 Mar 2012 23:24:47 UTC +00:00], ["updated_at", Fri, 09 Mar 2012 23:24:46 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Fri, 09 Mar 2012 23:24:46 UTC +00:00], ["data", "--- \n:tmp_data: 2\n"], ["expires_at", Sat, 10 Mar 2012 00:24:46 UTC +00:00], ["updated_at", Fri, 09 Mar 2012 23:24:46 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mTemporaryData Load (0.1ms)[0m  [1mSELECT "temporary_data".* FROM "temporary_data" WHERE (expires_at < '2012-03-09 23:24:47.451612')[0m
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Fri, 09 Mar 2012 23:24:47 UTC +00:00], ["data", "--- {}\n\n"], ["expires_at", Sat, 10 Mar 2012 04:24:47 UTC +00:00], ["updated_at", Fri, 09 Mar 2012 23:24:47 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Fri, 09 Mar 2012 23:24:47 UTC +00:00], ["data", "--- {}\n\n"], ["expires_at", Sun, 11 Mar 2012 23:24:47 UTC +00:00], ["updated_at", Fri, 09 Mar 2012 23:24:47 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Fri, 09 Mar 2012 23:24:47 UTC +00:00], ["data", "--- {}\n\n"], ["expires_at", Sun, 11 Mar 2012 23:24:47 UTC +00:00], ["updated_at", Fri, 09 Mar 2012 23:24:47 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Fri, 09 Mar 2012 23:24:47 UTC +00:00], ["data", "--- \n:tmp_data: 1\n"], ["expires_at", Fri, 09 Mar 2012 23:24:48 UTC +00:00], ["updated_at", Fri, 09 Mar 2012 23:24:47 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Fri, 09 Mar 2012 23:24:47 UTC +00:00], ["data", "--- \n:tmp_data: 2\n"], ["expires_at", Sat, 10 Mar 2012 00:24:47 UTC +00:00], ["updated_at", Fri, 09 Mar 2012 23:24:47 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mTemporaryData Load (0.1ms)[0m  [1mSELECT "temporary_data".* FROM "temporary_data" [0m
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Fri, 09 Mar 2012 23:24:48 UTC +00:00], ["data", "--- \n:tmp_data: 1\n"], ["expires_at", Fri, 09 Mar 2012 23:24:49 UTC +00:00], ["updated_at", Fri, 09 Mar 2012 23:24:48 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Fri, 09 Mar 2012 23:24:48 UTC +00:00], ["data", "--- \n:tmp_data: 2\n"], ["expires_at", Sat, 10 Mar 2012 00:24:48 UTC +00:00], ["updated_at", Fri, 09 Mar 2012 23:24:48 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mTemporaryData Load (0.1ms)[0m  SELECT "temporary_data".* FROM "temporary_data" WHERE (expires_at > '2012-03-09 23:24:49.467338')
+  [1m[36mTemporaryData Load (0.0ms)[0m  [1mSELECT "temporary_data".* FROM "temporary_data" WHERE (expires_at > '2012-03-09 23:24:49.468049')[0m
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Fri, 09 Mar 2012 23:24:49 UTC +00:00], ["data", "--- \n:tmp_data: 1\n"], ["expires_at", Fri, 09 Mar 2012 23:24:50 UTC +00:00], ["updated_at", Fri, 09 Mar 2012 23:24:49 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Fri, 09 Mar 2012 23:24:49 UTC +00:00], ["data", "--- \n:tmp_data: 2\n"], ["expires_at", Sat, 10 Mar 2012 00:24:49 UTC +00:00], ["updated_at", Fri, 09 Mar 2012 23:24:49 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mTemporaryData Load (0.1ms)[0m  SELECT "temporary_data".* FROM "temporary_data" WHERE (expires_at > '2012-03-09 23:24:50.472984')
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateTemporaryData (20120309215634)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Fri, 09 Mar 2012 23:26:48 UTC +00:00], ["data", "--- \n:last_name: Cingel\n:first_name: Vlado\n"], ["expires_at", Sun, 11 Mar 2012 23:26:48 UTC +00:00], ["updated_at", Fri, 09 Mar 2012 23:26:48 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Fri, 09 Mar 2012 23:26:48 UTC +00:00], ["data", "--- \n:tmp_data: 1\n"], ["expires_at", Fri, 09 Mar 2012 23:26:49 UTC +00:00], ["updated_at", Fri, 09 Mar 2012 23:26:48 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Fri, 09 Mar 2012 23:26:48 UTC +00:00], ["data", "--- \n:tmp_data: 2\n"], ["expires_at", Sat, 10 Mar 2012 00:26:48 UTC +00:00], ["updated_at", Fri, 09 Mar 2012 23:26:48 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "temporary_data" 
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "temporary_data" WHERE (expires_at < '2012-03-09 23:26:49.187121')[0m
+  [1m[35mTemporaryData Load (0.0ms)[0m  SELECT "temporary_data".* FROM "temporary_data" 
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Fri, 09 Mar 2012 23:26:49 UTC +00:00], ["data", "--- \n:tmp_data: 1\n"], ["expires_at", Fri, 09 Mar 2012 23:26:50 UTC +00:00], ["updated_at", Fri, 09 Mar 2012 23:26:49 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Fri, 09 Mar 2012 23:26:49 UTC +00:00], ["data", "--- \n:tmp_data: 2\n"], ["expires_at", Sat, 10 Mar 2012 00:26:49 UTC +00:00], ["updated_at", Fri, 09 Mar 2012 23:26:49 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mTemporaryData Load (0.1ms)[0m  [1mSELECT "temporary_data".* FROM "temporary_data" WHERE (expires_at < '2012-03-09 23:26:50.192788')[0m
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Fri, 09 Mar 2012 23:26:50 UTC +00:00], ["data", "--- {}\n\n"], ["expires_at", Sat, 10 Mar 2012 04:26:50 UTC +00:00], ["updated_at", Fri, 09 Mar 2012 23:26:50 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Fri, 09 Mar 2012 23:26:50 UTC +00:00], ["data", "--- {}\n\n"], ["expires_at", Sun, 11 Mar 2012 23:26:50 UTC +00:00], ["updated_at", Fri, 09 Mar 2012 23:26:50 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Fri, 09 Mar 2012 23:26:50 UTC +00:00], ["data", "--- {}\n\n"], ["expires_at", Sun, 11 Mar 2012 23:26:50 UTC +00:00], ["updated_at", Fri, 09 Mar 2012 23:26:50 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Fri, 09 Mar 2012 23:26:50 UTC +00:00], ["data", "--- \n:tmp_data: 1\n"], ["expires_at", Fri, 09 Mar 2012 23:26:51 UTC +00:00], ["updated_at", Fri, 09 Mar 2012 23:26:50 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Fri, 09 Mar 2012 23:26:50 UTC +00:00], ["data", "--- \n:tmp_data: 2\n"], ["expires_at", Sat, 10 Mar 2012 00:26:50 UTC +00:00], ["updated_at", Fri, 09 Mar 2012 23:26:50 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mTemporaryData Load (0.1ms)[0m  [1mSELECT "temporary_data".* FROM "temporary_data" [0m
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Fri, 09 Mar 2012 23:26:51 UTC +00:00], ["data", "--- \n:tmp_data: 1\n"], ["expires_at", Fri, 09 Mar 2012 23:26:52 UTC +00:00], ["updated_at", Fri, 09 Mar 2012 23:26:51 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Fri, 09 Mar 2012 23:26:51 UTC +00:00], ["data", "--- \n:tmp_data: 2\n"], ["expires_at", Sat, 10 Mar 2012 00:26:51 UTC +00:00], ["updated_at", Fri, 09 Mar 2012 23:26:51 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mTemporaryData Load (0.1ms)[0m  SELECT "temporary_data".* FROM "temporary_data" WHERE (expires_at > '2012-03-09 23:26:52.208536')
+  [1m[36mTemporaryData Load (0.0ms)[0m  [1mSELECT "temporary_data".* FROM "temporary_data" WHERE (expires_at > '2012-03-09 23:26:52.209302')[0m
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Fri, 09 Mar 2012 23:26:52 UTC +00:00], ["data", "--- \n:tmp_data: 1\n"], ["expires_at", Fri, 09 Mar 2012 23:26:53 UTC +00:00], ["updated_at", Fri, 09 Mar 2012 23:26:52 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Fri, 09 Mar 2012 23:26:52 UTC +00:00], ["data", "--- \n:tmp_data: 2\n"], ["expires_at", Sat, 10 Mar 2012 00:26:52 UTC +00:00], ["updated_at", Fri, 09 Mar 2012 23:26:52 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mTemporaryData Load (0.1ms)[0m  SELECT "temporary_data".* FROM "temporary_data" WHERE (expires_at > '2012-03-09 23:26:53.214360')
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateTemporaryData (20120309215634)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateTemporaryData (20120309215634)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateTemporaryData (20120309215634)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateTemporaryData (20120309215634)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateTemporaryData (20120309215634)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateTemporaryData (20120309215634)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateTemporaryData (20120309215634)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateTemporaryData (20120309215634)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateTemporaryData (20120309215634)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateTemporaryData (20120309215634)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateTemporaryData (20120309215634)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateTemporaryData (20120309215634)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateTemporaryData (20120309215634)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateTemporaryData (20120309215634)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateTemporaryData (20120309215634)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateTemporaryData (20120309215634)
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by DummyController#test as HTML
+  Rendered text template (0.0ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateTemporaryData (20120309215634)
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by DummyController#test as HTML
+Completed 500 Internal Server Error in 3ms
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateTemporaryData (20120309215634)
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by DummyController#test as HTML
+  Rendered text template (0.0ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateTemporaryData (20120309215634)
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by DummyController#test as HTML
+Completed 500 Internal Server Error in 3ms
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateTemporaryData (20120309215634)
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by DummyController#test as HTML
+  Rendered text template (0.0ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateTemporaryData (20120309215634)
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by DummyController#test as HTML
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.2ms)[0m  INSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Fri, 09 Mar 2012 23:37:52 UTC +00:00], ["data", "--- \n:foo: bar\n"], ["expires_at", Sun, 11 Mar 2012 23:37:52 UTC +00:00], ["updated_at", Fri, 09 Mar 2012 23:37:52 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  Rendered text template (0.0ms)
+Completed 200 OK in 15ms (Views: 2.7ms | ActiveRecord: 2.4ms)
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateTemporaryData (20120309215634)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateTemporaryData (20120309215634)
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by DummyController#test_controller_helpers as HTML
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.9ms)[0m  INSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Fri, 09 Mar 2012 23:40:11 UTC +00:00], ["data", "--- \n:foo: bar\n"], ["expires_at", Sun, 11 Mar 2012 23:40:11 UTC +00:00], ["updated_at", Fri, 09 Mar 2012 23:40:11 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mTemporaryData Load (0.1ms)[0m  SELECT "temporary_data".* FROM "temporary_data" WHERE "temporary_data"."id" = 1 LIMIT 1
+  Rendered text template (0.0ms)
+Completed 200 OK in 34ms (Views: 2.6ms | ActiveRecord: 2.2ms)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateTemporaryData (20120309215634)
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by DummyController#test_controller_helpers as HTML
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.9ms)[0m  INSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Fri, 09 Mar 2012 23:42:46 UTC +00:00], ["data", "--- \n:foo: bar\n"], ["expires_at", Sun, 11 Mar 2012 23:42:46 UTC +00:00], ["updated_at", Fri, 09 Mar 2012 23:42:46 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mTemporaryData Load (0.1ms)[0m  SELECT "temporary_data".* FROM "temporary_data" WHERE "temporary_data"."id" = 1 LIMIT 1
+  Rendered text template (0.0ms)
+Completed 200 OK in 18ms (Views: 2.6ms | ActiveRecord: 2.2ms)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateTemporaryData (20120309215634)
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by DummyController#test_controller_helpers as HTML
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.8ms)[0m  INSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Fri, 09 Mar 2012 23:43:06 UTC +00:00], ["data", "--- \n:foo: bar\n"], ["expires_at", Sun, 11 Mar 2012 23:43:06 UTC +00:00], ["updated_at", Fri, 09 Mar 2012 23:43:06 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mTemporaryData Load (0.1ms)[0m  SELECT "temporary_data".* FROM "temporary_data" WHERE "temporary_data"."id" = 1 LIMIT 1
+  Rendered text template (0.0ms)
+Completed 200 OK in 18ms (Views: 2.5ms | ActiveRecord: 2.4ms)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateTemporaryData (20120309215634)
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by DummyController#test_controller_helpers as HTML
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.8ms)[0m  INSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Fri, 09 Mar 2012 23:44:31 UTC +00:00], ["data", "--- \n:foo: bar\n"], ["expires_at", Sun, 11 Mar 2012 23:44:31 UTC +00:00], ["updated_at", Fri, 09 Mar 2012 23:44:31 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mTemporaryData Load (0.1ms)[0m  SELECT "temporary_data".* FROM "temporary_data" WHERE "temporary_data"."id" = 1 LIMIT 1
+Completed 200 OK in 15ms (ActiveRecord: 2.1ms)
+  [1m[36m (23.6ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateTemporaryData (20120309215634)
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by DummyController#test_controller_helpers as HTML
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.8ms)[0m  INSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Fri, 09 Mar 2012 23:45:37 UTC +00:00], ["data", "--- \n:foo: bar\n"], ["expires_at", Sun, 11 Mar 2012 23:45:37 UTC +00:00], ["updated_at", Fri, 09 Mar 2012 23:45:37 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mTemporaryData Load (0.1ms)[0m  SELECT "temporary_data".* FROM "temporary_data" WHERE "temporary_data"."id" = 1 LIMIT 1
+Completed 200 OK in 16ms (ActiveRecord: 2.1ms)
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateTemporaryData (20120309215634)
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by DummyController#test_controller_helpers as HTML
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.8ms)[0m  INSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Fri, 09 Mar 2012 23:46:11 UTC +00:00], ["data", "--- \n:foo: bar\n"], ["expires_at", Sun, 11 Mar 2012 23:46:11 UTC +00:00], ["updated_at", Fri, 09 Mar 2012 23:46:11 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mTemporaryData Load (0.1ms)[0m  SELECT "temporary_data".* FROM "temporary_data" WHERE "temporary_data"."id" = 1 LIMIT 1
+Completed 200 OK in 15ms (ActiveRecord: 2.1ms)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateTemporaryData (20120309215634)
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by DummyController#test_controller_helpers as HTML
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.8ms)[0m  INSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Fri, 09 Mar 2012 23:47:11 UTC +00:00], ["data", "--- \n:foo: bar\n"], ["expires_at", Sun, 11 Mar 2012 23:47:11 UTC +00:00], ["updated_at", Fri, 09 Mar 2012 23:47:11 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mTemporaryData Load (0.1ms)[0m  SELECT "temporary_data".* FROM "temporary_data" WHERE "temporary_data"."id" = 1 LIMIT 1
+Completed 200 OK in 15ms (ActiveRecord: 2.1ms)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateTemporaryData (20120309215634)
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by DummyController#test_controller_helpers as HTML
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.7ms)[0m  INSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Fri, 09 Mar 2012 23:47:25 UTC +00:00], ["data", "--- \n:foo: bar\n"], ["expires_at", Sun, 11 Mar 2012 23:47:25 UTC +00:00], ["updated_at", Fri, 09 Mar 2012 23:47:25 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mTemporaryData Load (0.1ms)[0m  SELECT "temporary_data".* FROM "temporary_data" WHERE "temporary_data"."id" = 1 LIMIT 1
+Completed 200 OK in 15ms (ActiveRecord: 2.0ms)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateTemporaryData (20120309215634)
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by DummyController#test_controller_helpers as HTML
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.1ms)[0m  INSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Fri, 09 Mar 2012 23:48:18 UTC +00:00], ["data", "--- \n:foo: bar\n"], ["expires_at", Sun, 11 Mar 2012 23:48:18 UTC +00:00], ["updated_at", Fri, 09 Mar 2012 23:48:18 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mTemporaryData Load (0.1ms)[0m  SELECT "temporary_data".* FROM "temporary_data" WHERE "temporary_data"."id" = 1 LIMIT 1
+Completed 200 OK in 15ms (ActiveRecord: 2.3ms)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateTemporaryData (20120309215634)
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by DummyController#test_controller_helpers as HTML
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.8ms)[0m  INSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Fri, 09 Mar 2012 23:48:45 UTC +00:00], ["data", "--- \n:foo: bar\n"], ["expires_at", Sun, 11 Mar 2012 23:48:45 UTC +00:00], ["updated_at", Fri, 09 Mar 2012 23:48:45 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mTemporaryData Load (0.1ms)[0m  SELECT "temporary_data".* FROM "temporary_data" WHERE "temporary_data"."id" = 1 LIMIT 1
+Completed 200 OK in 15ms (ActiveRecord: 2.0ms)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateTemporaryData (20120309215634)
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by DummyController#test_controller_helpers as HTML
+  Parameters: {"data"=>{"foo"=>"bar"}}
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.8ms)[0m  INSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Fri, 09 Mar 2012 23:55:50 UTC +00:00], ["data", "--- !map:ActiveSupport::HashWithIndifferentAccess \nfoo: bar\n"], ["expires_at", Sun, 11 Mar 2012 23:55:50 UTC +00:00], ["updated_at", Fri, 09 Mar 2012 23:55:50 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mTemporaryData Load (0.1ms)[0m  SELECT "temporary_data".* FROM "temporary_data" WHERE "temporary_data"."id" = 1 LIMIT 1
+Completed 200 OK in 15ms (ActiveRecord: 2.1ms)
+  [1m[36m (1.9ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateTemporaryData (20120309215634)
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by DummyController#test_controller_helpers as HTML
+  Parameters: {"data"=>{"foo"=>"bar"}}
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.8ms)[0m  INSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Fri, 09 Mar 2012 23:56:02 UTC +00:00], ["data", "--- !map:ActiveSupport::HashWithIndifferentAccess \nfoo: bar\n"], ["expires_at", Sun, 11 Mar 2012 23:56:02 UTC +00:00], ["updated_at", Fri, 09 Mar 2012 23:56:02 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mTemporaryData Load (0.1ms)[0m  SELECT "temporary_data".* FROM "temporary_data" WHERE "temporary_data"."id" = 1 LIMIT 1
+Completed 200 OK in 16ms (ActiveRecord: 2.1ms)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateTemporaryData (20120309215634)
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by DummyController#test_controller_helpers as HTML
+  Parameters: {"data"=>{"foo"=>"bar"}}
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.8ms)[0m  INSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Fri, 09 Mar 2012 23:56:26 UTC +00:00], ["data", "--- !map:ActiveSupport::HashWithIndifferentAccess \nfoo: bar\n"], ["expires_at", Sun, 11 Mar 2012 23:56:26 UTC +00:00], ["updated_at", Fri, 09 Mar 2012 23:56:26 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mTemporaryData Load (0.1ms)[0m  SELECT "temporary_data".* FROM "temporary_data" WHERE "temporary_data"."id" = 1 LIMIT 1
+Completed 200 OK in 15ms (ActiveRecord: 2.1ms)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateTemporaryData (20120309215634)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by DummyController#test_controller_helpers as HTML
+  Parameters: {"data"=>{"foo"=>"bar"}, "expires_at"=>"Sun Mar 11 00:59:48 +0100 2012"}
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Fri, 09 Mar 2012 23:59:48 UTC +00:00], ["data", "--- !map:ActiveSupport::HashWithIndifferentAccess \nfoo: bar\n"], ["expires_at", Sat, 10 Mar 2012 23:59:48 UTC +00:00], ["updated_at", Fri, 09 Mar 2012 23:59:48 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mTemporaryData Load (0.1ms)[0m  SELECT "temporary_data".* FROM "temporary_data" WHERE "temporary_data"."id" = 1 AND (expires_at > '2012-03-09 23:59:48.448825') LIMIT 1
+Completed 200 OK in 16ms (ActiveRecord: 2.2ms)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateTemporaryData (20120309215634)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by DummyController#test_controller_helpers as HTML
+  Parameters: {"data"=>{"foo"=>"bar"}, "expires_at"=>"Sun Mar 11 00:59:55 +0100 2012"}
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.8ms)[0m  INSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Fri, 09 Mar 2012 23:59:55 UTC +00:00], ["data", "--- !map:ActiveSupport::HashWithIndifferentAccess \nfoo: bar\n"], ["expires_at", Sat, 10 Mar 2012 23:59:55 UTC +00:00], ["updated_at", Fri, 09 Mar 2012 23:59:55 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mTemporaryData Load (0.1ms)[0m  SELECT "temporary_data".* FROM "temporary_data" WHERE "temporary_data"."id" = 1 AND (expires_at > '2012-03-09 23:59:55.998871') LIMIT 1
+Completed 200 OK in 16ms (ActiveRecord: 2.1ms)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateTemporaryData (20120309215634)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by DummyController#test_controller_helpers as HTML
+  Parameters: {"data"=>{"foo"=>"bar"}, "expires_at"=>"2012-03-11 00:00:16 UTC"}
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.6ms)[0m  INSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Sat, 10 Mar 2012 00:00:16 UTC +00:00], ["data", "--- !map:ActiveSupport::HashWithIndifferentAccess \nfoo: bar\n"], ["expires_at", Sun, 11 Mar 2012 00:00:16 UTC +00:00], ["updated_at", Sat, 10 Mar 2012 00:00:16 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mTemporaryData Load (0.1ms)[0m  SELECT "temporary_data".* FROM "temporary_data" WHERE "temporary_data"."id" = 1 AND (expires_at > '2012-03-10 00:00:16.338013') LIMIT 1
+Completed 200 OK in 16ms (ActiveRecord: 1.9ms)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateTemporaryData (20120309215634)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by DummyController#test_controller_helpers as HTML
+  Parameters: {"data"=>{"foo"=>"bar"}, "expires_at"=>"2012-03-11 00:00:33 UTC"}
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.8ms)[0m  INSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Sat, 10 Mar 2012 00:00:33 UTC +00:00], ["data", "--- !map:ActiveSupport::HashWithIndifferentAccess \nfoo: bar\n"], ["expires_at", Sun, 11 Mar 2012 00:00:33 UTC +00:00], ["updated_at", Sat, 10 Mar 2012 00:00:33 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mTemporaryData Load (0.1ms)[0m  SELECT "temporary_data".* FROM "temporary_data" WHERE "temporary_data"."id" = 1 AND (expires_at > '2012-03-10 00:00:33.523820') LIMIT 1
+Completed 200 OK in 16ms (ActiveRecord: 2.1ms)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateTemporaryData (20120309215634)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by DummyController#test_controller_helpers as HTML
+  Parameters: {"data"=>{"foo"=>"bar"}, "expires_at"=>"2012-03-11 00:01:09 UTC"}
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.5ms)[0m  INSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Sat, 10 Mar 2012 00:01:09 UTC +00:00], ["data", "--- !map:ActiveSupport::HashWithIndifferentAccess \nfoo: bar\n"], ["expires_at", Sun, 11 Mar 2012 00:01:09 UTC +00:00], ["updated_at", Sat, 10 Mar 2012 00:01:09 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mTemporaryData Load (0.1ms)[0m  SELECT "temporary_data".* FROM "temporary_data" WHERE "temporary_data"."id" = 1 AND (expires_at > '2012-03-10 00:01:09.624026') LIMIT 1
+Completed 200 OK in 16ms (ActiveRecord: 1.8ms)
+  [1m[36m (88.7ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateTemporaryData (20120309215634)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by DummyController#test_controller_helpers as HTML
+  Parameters: {"data"=>{"foo"=>"bar"}, "expires_at"=>"2012-03-11 00:01:55 UTC"}
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.6ms)[0m  INSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Sat, 10 Mar 2012 00:01:55 UTC +00:00], ["data", "--- !map:ActiveSupport::HashWithIndifferentAccess \nfoo: bar\n"], ["expires_at", Sun, 11 Mar 2012 00:01:55 UTC +00:00], ["updated_at", Sat, 10 Mar 2012 00:01:55 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mTemporaryData Load (0.1ms)[0m  SELECT "temporary_data".* FROM "temporary_data" WHERE "temporary_data"."id" = 1 AND (expires_at > '2012-03-10 00:01:55.476078') LIMIT 1
+Completed 200 OK in 16ms (ActiveRecord: 1.9ms)
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateTemporaryData (20120309215634)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by DummyController#test_controller_helpers as HTML
+  Parameters: {"data"=>{"foo"=>"bar"}, "expires_at"=>"2012-03-11 00:02:01 UTC"}
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.6ms)[0m  INSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Sat, 10 Mar 2012 00:02:01 UTC +00:00], ["data", "--- !map:ActiveSupport::HashWithIndifferentAccess \nfoo: bar\n"], ["expires_at", Sun, 11 Mar 2012 00:02:01 UTC +00:00], ["updated_at", Sat, 10 Mar 2012 00:02:01 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mTemporaryData Load (0.1ms)[0m  SELECT "temporary_data".* FROM "temporary_data" WHERE "temporary_data"."id" = 1 AND (expires_at > '2012-03-10 00:02:01.766607') LIMIT 1
+Completed 200 OK in 16ms (ActiveRecord: 1.9ms)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateTemporaryData (20120309215634)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by DummyController#test_controller_helpers as HTML
+  Parameters: {"data"=>{"foo"=>"bar"}, "expires_at"=>"2012-03-11 00:02:07 UTC"}
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.5ms)[0m  INSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Sat, 10 Mar 2012 00:02:07 UTC +00:00], ["data", "--- !map:ActiveSupport::HashWithIndifferentAccess \nfoo: bar\n"], ["expires_at", Sun, 11 Mar 2012 00:02:07 UTC +00:00], ["updated_at", Sat, 10 Mar 2012 00:02:07 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mTemporaryData Load (0.1ms)[0m  SELECT "temporary_data".* FROM "temporary_data" WHERE "temporary_data"."id" = 1 AND (expires_at > '2012-03-10 00:02:07.555323') LIMIT 1
+Completed 200 OK in 16ms (ActiveRecord: 1.8ms)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateTemporaryData (20120309215634)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by DummyController#test_controller_helpers as HTML
+  Parameters: {"data"=>{"foo"=>"bar"}, "expires_at"=>"2012-03-11 00:03:12 UTC"}
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.5ms)[0m  INSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Sat, 10 Mar 2012 00:03:12 UTC +00:00], ["data", "--- !map:ActiveSupport::HashWithIndifferentAccess \nfoo: bar\n"], ["expires_at", Sun, 11 Mar 2012 00:03:12 UTC +00:00], ["updated_at", Sat, 10 Mar 2012 00:03:12 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mTemporaryData Load (0.1ms)[0m  SELECT "temporary_data".* FROM "temporary_data" WHERE "temporary_data"."id" = 1 AND (expires_at > '2012-03-10 00:03:12.044594') LIMIT 1
+Completed 200 OK in 16ms (ActiveRecord: 1.8ms)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateTemporaryData (20120309215634)
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by DummyController#test_controller_helpers as HTML
+  Parameters: {"data"=>{"foo"=>"bar"}, "expires_at"=>"2012-03-11 00:04:08 UTC"}
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.6ms)[0m  INSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Sat, 10 Mar 2012 00:04:08 UTC +00:00], ["data", "--- !map:ActiveSupport::HashWithIndifferentAccess \nfoo: bar\n"], ["expires_at", Sun, 11 Mar 2012 00:04:08 UTC +00:00], ["updated_at", Sat, 10 Mar 2012 00:04:08 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mTemporaryData Load (0.1ms)[0m  SELECT "temporary_data".* FROM "temporary_data" WHERE "temporary_data"."id" = 1 AND (expires_at > '2012-03-10 00:04:08.940690') LIMIT 1
+Completed 200 OK in 16ms (ActiveRecord: 1.9ms)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateTemporaryData (20120309215634)
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by DummyController#set_data as HTML
+  Parameters: {"data"=>{"foo"=>"bar"}, "expires_at"=>"2012-03-11 00:08:01 UTC"}
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.6ms)[0m  INSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Sat, 10 Mar 2012 00:08:01 UTC +00:00], ["data", "--- !map:ActiveSupport::HashWithIndifferentAccess \nfoo: bar\n"], ["expires_at", Sun, 11 Mar 2012 00:08:01 UTC +00:00], ["updated_at", Sat, 10 Mar 2012 00:08:01 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 13ms (ActiveRecord: 1.8ms)
+Processing by DummyController#get_data as HTML
+  Parameters: {"data"=>{"foo"=>"bar"}, "expires_at"=>"2012-03-11 00:08:01 UTC"}
+  [1m[35mTemporaryData Load (0.1ms)[0m  SELECT "temporary_data".* FROM "temporary_data" WHERE "temporary_data"."id" = 1 AND (expires_at > '2012-03-10 00:08:01.625850') LIMIT 1
+Completed 200 OK in 4ms (ActiveRecord: 0.1ms)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateTemporaryData (20120309215634)
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by DummyController#set_data as HTML
+  Parameters: {"data"=>{"foo"=>"bar"}, "expires_at"=>"2012-03-10 00:09:02 UTC"}
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.8ms)[0m  INSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Sat, 10 Mar 2012 00:09:01 UTC +00:00], ["data", "--- !map:ActiveSupport::HashWithIndifferentAccess \nfoo: bar\n"], ["expires_at", Sat, 10 Mar 2012 00:09:02 UTC +00:00], ["updated_at", Sat, 10 Mar 2012 00:09:01 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 13ms (ActiveRecord: 2.0ms)
+Processing by DummyController#get_data as HTML
+  Parameters: {"data"=>{"foo"=>"bar"}, "expires_at"=>"2012-03-10 00:09:02 UTC"}
+  [1m[35mTemporaryData Load (0.1ms)[0m  SELECT "temporary_data".* FROM "temporary_data" WHERE "temporary_data"."id" = 1 AND (expires_at > '2012-03-10 00:09:02.643579') LIMIT 1
+Completed 200 OK in 4ms (ActiveRecord: 0.1ms)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by DummyController#set_data as HTML
+  Parameters: {"data"=>{"foo"=>"bar"}, "expires_at"=>"2012-03-11 00:09:02 UTC"}
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Sat, 10 Mar 2012 00:09:02 UTC +00:00], ["data", "--- !map:ActiveSupport::HashWithIndifferentAccess \nfoo: bar\n"], ["expires_at", Sun, 11 Mar 2012 00:09:02 UTC +00:00], ["updated_at", Sat, 10 Mar 2012 00:09:02 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 2ms (ActiveRecord: 0.3ms)
+Processing by DummyController#get_data as HTML
+  Parameters: {"data"=>{"foo"=>"bar"}, "expires_at"=>"2012-03-11 00:09:02 UTC"}
+  [1m[35mTemporaryData Load (0.1ms)[0m  SELECT "temporary_data".* FROM "temporary_data" WHERE "temporary_data"."id" = 1 AND (expires_at > '2012-03-10 00:09:02.652786') LIMIT 1
+Completed 200 OK in 1ms (ActiveRecord: 0.1ms)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateTemporaryData (20120309215634)
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by DummyController#set_data as HTML
+  Parameters: {"data"=>{"foo"=>"bar"}, "expires_at"=>"2012-03-10 00:09:38 UTC"}
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.7ms)[0m  INSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Sat, 10 Mar 2012 00:09:37 UTC +00:00], ["data", "--- !map:ActiveSupport::HashWithIndifferentAccess \nfoo: bar\n"], ["expires_at", Sat, 10 Mar 2012 00:09:38 UTC +00:00], ["updated_at", Sat, 10 Mar 2012 00:09:37 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 12ms (ActiveRecord: 1.9ms)
+Processing by DummyController#get_data as HTML
+  Parameters: {"data"=>{"foo"=>"bar"}, "expires_at"=>"2012-03-10 00:09:38 UTC"}
+  [1m[35mTemporaryData Load (0.1ms)[0m  SELECT "temporary_data".* FROM "temporary_data" WHERE "temporary_data"."id" = 1 AND (expires_at > '2012-03-10 00:09:38.908071') LIMIT 1
+Completed 200 OK in 3ms (ActiveRecord: 0.1ms)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by DummyController#set_data as HTML
+  Parameters: {"data"=>{"foo"=>"bar"}, "expires_at"=>"2012-03-11 00:09:38 UTC"}
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Sat, 10 Mar 2012 00:09:38 UTC +00:00], ["data", "--- !map:ActiveSupport::HashWithIndifferentAccess \nfoo: bar\n"], ["expires_at", Sun, 11 Mar 2012 00:09:38 UTC +00:00], ["updated_at", Sat, 10 Mar 2012 00:09:38 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 2ms (ActiveRecord: 0.3ms)
+Processing by DummyController#get_data as HTML
+  Parameters: {"data"=>{"foo"=>"bar"}, "expires_at"=>"2012-03-11 00:09:38 UTC"}
+  [1m[35mTemporaryData Load (0.3ms)[0m  SELECT "temporary_data".* FROM "temporary_data" WHERE "temporary_data"."id" = 1 AND (expires_at > '2012-03-10 00:09:38.916786') LIMIT 1
+Completed 200 OK in 1ms (ActiveRecord: 0.3ms)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateTemporaryData (20120309215634)
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by DummyController#set_data as HTML
+  Parameters: {"data"=>{"foo"=>"bar"}, "expires_at"=>"2012-03-10 00:09:53 UTC"}
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.6ms)[0m  INSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Sat, 10 Mar 2012 00:09:52 UTC +00:00], ["data", "--- !map:ActiveSupport::HashWithIndifferentAccess \nfoo: bar\n"], ["expires_at", Sat, 10 Mar 2012 00:09:53 UTC +00:00], ["updated_at", Sat, 10 Mar 2012 00:09:52 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 12ms (ActiveRecord: 1.8ms)
+Processing by DummyController#get_data as HTML
+  Parameters: {"data"=>{"foo"=>"bar"}, "expires_at"=>"2012-03-10 00:09:53 UTC"}
+  [1m[35mTemporaryData Load (0.1ms)[0m  SELECT "temporary_data".* FROM "temporary_data" WHERE "temporary_data"."id" = 1 AND (expires_at > '2012-03-10 00:09:53.215156') LIMIT 1
+Completed 200 OK in 3ms (ActiveRecord: 0.1ms)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by DummyController#set_data as HTML
+  Parameters: {"data"=>{"foo"=>"bar"}, "expires_at"=>"2012-03-11 00:09:53 UTC"}
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Sat, 10 Mar 2012 00:09:53 UTC +00:00], ["data", "--- !map:ActiveSupport::HashWithIndifferentAccess \nfoo: bar\n"], ["expires_at", Sun, 11 Mar 2012 00:09:53 UTC +00:00], ["updated_at", Sat, 10 Mar 2012 00:09:53 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 2ms (ActiveRecord: 0.3ms)
+Processing by DummyController#get_data as HTML
+  Parameters: {"data"=>{"foo"=>"bar"}, "expires_at"=>"2012-03-11 00:09:53 UTC"}
+  [1m[35mTemporaryData Load (0.1ms)[0m  SELECT "temporary_data".* FROM "temporary_data" WHERE "temporary_data"."id" = 1 AND (expires_at > '2012-03-10 00:09:53.223963') LIMIT 1
+Completed 200 OK in 1ms (ActiveRecord: 0.1ms)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateTemporaryData (20120309215634)
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by DummyController#set_data as HTML
+  Parameters: {"data"=>{"foo"=>"bar"}, "expires_at"=>"2012-03-10 00:10:56 UTC"}
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.5ms)[0m  INSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Sat, 10 Mar 2012 00:10:55 UTC +00:00], ["data", "--- !map:ActiveSupport::HashWithIndifferentAccess \nfoo: bar\n"], ["expires_at", Sat, 10 Mar 2012 00:10:56 UTC +00:00], ["updated_at", Sat, 10 Mar 2012 00:10:55 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 12ms (ActiveRecord: 1.7ms)
+Processing by DummyController#get_data as HTML
+  Parameters: {"data"=>{"foo"=>"bar"}, "expires_at"=>"2012-03-10 00:10:56 UTC"}
+  [1m[35mTemporaryData Load (0.1ms)[0m  SELECT "temporary_data".* FROM "temporary_data" WHERE "temporary_data"."id" = 1 AND (expires_at > '2012-03-10 00:10:56.181791') LIMIT 1
+Completed 200 OK in 3ms (ActiveRecord: 0.1ms)
+  [1m[36m (1.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by DummyController#set_data as HTML
+  Parameters: {"data"=>{"foo"=>"bar"}, "expires_at"=>"2012-03-11 00:10:56 UTC"}
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Sat, 10 Mar 2012 00:10:56 UTC +00:00], ["data", "--- !map:ActiveSupport::HashWithIndifferentAccess \nfoo: bar\n"], ["expires_at", Sun, 11 Mar 2012 00:10:56 UTC +00:00], ["updated_at", Sat, 10 Mar 2012 00:10:56 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 2ms (ActiveRecord: 0.3ms)
+Processing by DummyController#get_data as HTML
+  Parameters: {"data"=>{"foo"=>"bar"}, "expires_at"=>"2012-03-11 00:10:56 UTC"}
+  [1m[35mTemporaryData Load (0.1ms)[0m  SELECT "temporary_data".* FROM "temporary_data" WHERE "temporary_data"."id" = 1 AND (expires_at > '2012-03-10 00:10:56.191968') LIMIT 1
+Completed 200 OK in 1ms (ActiveRecord: 0.1ms)
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateTemporaryData (20120309215634)
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by DummyController#set_data as HTML
+  Parameters: {"data"=>{"foo"=>"bar"}, "expires_at"=>"2012-03-10 00:11:22 UTC"}
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.6ms)[0m  INSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Sat, 10 Mar 2012 00:11:21 UTC +00:00], ["data", "--- !map:ActiveSupport::HashWithIndifferentAccess \nfoo: bar\n"], ["expires_at", Sat, 10 Mar 2012 00:11:22 UTC +00:00], ["updated_at", Sat, 10 Mar 2012 00:11:21 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 12ms (ActiveRecord: 1.8ms)
+Processing by DummyController#get_data as HTML
+  Parameters: {"data"=>{"foo"=>"bar"}, "expires_at"=>"2012-03-10 00:11:22 UTC"}
+  [1m[35mTemporaryData Load (0.1ms)[0m  SELECT "temporary_data".* FROM "temporary_data" WHERE "temporary_data"."id" = 1 AND (expires_at > '2012-03-10 00:11:22.553038') LIMIT 1
+Completed 200 OK in 3ms (ActiveRecord: 0.1ms)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by DummyController#set_data as HTML
+  Parameters: {"data"=>{"foo"=>"bar"}, "expires_at"=>"2012-03-11 00:11:22 UTC"}
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Sat, 10 Mar 2012 00:11:22 UTC +00:00], ["data", "--- !map:ActiveSupport::HashWithIndifferentAccess \nfoo: bar\n"], ["expires_at", Sun, 11 Mar 2012 00:11:22 UTC +00:00], ["updated_at", Sat, 10 Mar 2012 00:11:22 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 2ms (ActiveRecord: 0.3ms)
+Processing by DummyController#get_data as HTML
+  Parameters: {"data"=>{"foo"=>"bar"}, "expires_at"=>"2012-03-11 00:11:22 UTC"}
+  [1m[35mTemporaryData Load (0.1ms)[0m  SELECT "temporary_data".* FROM "temporary_data" WHERE "temporary_data"."id" = 1 AND (expires_at > '2012-03-10 00:11:22.564675') LIMIT 1
+Completed 200 OK in 1ms (ActiveRecord: 0.1ms)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateTemporaryData (20120309215634)
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by DummyController#set_data as HTML
+  Parameters: {"data"=>{"foo"=>"bar"}, "expires_at"=>"2012-03-10 00:11:55 UTC"}
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.7ms)[0m  INSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Sat, 10 Mar 2012 00:11:54 UTC +00:00], ["data", "--- !map:ActiveSupport::HashWithIndifferentAccess \nfoo: bar\n"], ["expires_at", Sat, 10 Mar 2012 00:11:55 UTC +00:00], ["updated_at", Sat, 10 Mar 2012 00:11:54 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 13ms (ActiveRecord: 1.9ms)
+Processing by DummyController#get_data as HTML
+  Parameters: {"data"=>{"foo"=>"bar"}, "expires_at"=>"2012-03-10 00:11:55 UTC"}
+  [1m[35mTemporaryData Load (0.1ms)[0m  SELECT "temporary_data".* FROM "temporary_data" WHERE "temporary_data"."id" = 1 AND (expires_at > '2012-03-10 00:11:55.307460') LIMIT 1
+Completed 200 OK in 3ms (ActiveRecord: 0.1ms)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by DummyController#set_data as HTML
+  Parameters: {"data"=>{"foo"=>"bar"}, "expires_at"=>"2012-03-11 00:11:55 UTC"}
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Sat, 10 Mar 2012 00:11:55 UTC +00:00], ["data", "--- !map:ActiveSupport::HashWithIndifferentAccess \nfoo: bar\n"], ["expires_at", Sun, 11 Mar 2012 00:11:55 UTC +00:00], ["updated_at", Sat, 10 Mar 2012 00:11:55 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 2ms (ActiveRecord: 0.3ms)
+Processing by DummyController#get_data as HTML
+  Parameters: {"data"=>{"foo"=>"bar"}, "expires_at"=>"2012-03-11 00:11:55 UTC"}
+  [1m[35mTemporaryData Load (0.1ms)[0m  SELECT "temporary_data".* FROM "temporary_data" WHERE "temporary_data"."id" = 1 AND (expires_at > '2012-03-10 00:11:55.318914') LIMIT 1
+Completed 200 OK in 1ms (ActiveRecord: 0.1ms)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateTemporaryData (20120309215634)
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by DummyController#set_data as HTML
+  Parameters: {"data"=>{"foo"=>"bar"}, "expires_at"=>"2012-03-10 00:12:51 UTC"}
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.8ms)[0m  INSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Sat, 10 Mar 2012 00:12:50 UTC +00:00], ["data", "--- !map:ActiveSupport::HashWithIndifferentAccess \nfoo: bar\n"], ["expires_at", Sat, 10 Mar 2012 00:12:51 UTC +00:00], ["updated_at", Sat, 10 Mar 2012 00:12:50 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 12ms (ActiveRecord: 2.0ms)
+Processing by DummyController#get_data as HTML
+  Parameters: {"data"=>{"foo"=>"bar"}, "expires_at"=>"2012-03-10 00:12:51 UTC"}
+  [1m[35mTemporaryData Load (0.1ms)[0m  SELECT "temporary_data".* FROM "temporary_data" WHERE "temporary_data"."id" = 1 AND (expires_at > '2012-03-10 00:12:51.933717') LIMIT 1
+Completed 200 OK in 3ms (ActiveRecord: 0.1ms)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by DummyController#set_data as HTML
+  Parameters: {"data"=>{"foo"=>"bar"}, "expires_at"=>"2012-03-11 00:12:51 UTC"}
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Sat, 10 Mar 2012 00:12:51 UTC +00:00], ["data", "--- !map:ActiveSupport::HashWithIndifferentAccess \nfoo: bar\n"], ["expires_at", Sun, 11 Mar 2012 00:12:51 UTC +00:00], ["updated_at", Sat, 10 Mar 2012 00:12:51 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 2ms (ActiveRecord: 0.3ms)
+Processing by DummyController#get_data as HTML
+  Parameters: {"data"=>{"foo"=>"bar"}, "expires_at"=>"2012-03-11 00:12:51 UTC"}
+  [1m[35mTemporaryData Load (0.1ms)[0m  SELECT "temporary_data".* FROM "temporary_data" WHERE "temporary_data"."id" = 1 AND (expires_at > '2012-03-10 00:12:51.942389') LIMIT 1
+Completed 200 OK in 1ms (ActiveRecord: 0.1ms)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateTemporaryData (20120309215634)
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by DummyController#set_data as HTML
+  Parameters: {"data"=>{"foo"=>"bar"}}
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Sat, 10 Mar 2012 00:19:33 UTC +00:00], ["data", "--- !map:ActiveSupport::HashWithIndifferentAccess \nfoo: bar\n"], ["expires_at", Mon, 12 Mar 2012 00:19:33 UTC +00:00], ["updated_at", Sat, 10 Mar 2012 00:19:33 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 12ms (ActiveRecord: 2.2ms)
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "temporary_data" 
+Processing by DummyController#clear_data as HTML
+  Parameters: {"data"=>{"foo"=>"bar"}}
+Completed 500 Internal Server Error in 3ms
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by DummyController#set_data as HTML
+  Parameters: {"data"=>{"foo"=>"bar"}, "expires_at"=>"2012-03-10 00:19:34 UTC"}
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Sat, 10 Mar 2012 00:19:33 UTC +00:00], ["data", "--- !map:ActiveSupport::HashWithIndifferentAccess \nfoo: bar\n"], ["expires_at", Sat, 10 Mar 2012 00:19:34 UTC +00:00], ["updated_at", Sat, 10 Mar 2012 00:19:33 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 2ms (ActiveRecord: 0.3ms)
+Processing by DummyController#get_data as HTML
+  Parameters: {"data"=>{"foo"=>"bar"}, "expires_at"=>"2012-03-10 00:19:34 UTC"}
+  [1m[35mTemporaryData Load (0.1ms)[0m  SELECT "temporary_data".* FROM "temporary_data" WHERE "temporary_data"."id" = 1 AND (expires_at > '2012-03-10 00:19:34.644523') LIMIT 1
+Completed 200 OK in 4ms (ActiveRecord: 0.1ms)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by DummyController#set_data as HTML
+  Parameters: {"data"=>{"foo"=>"bar"}, "expires_at"=>"2012-03-11 00:19:34 UTC"}
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Sat, 10 Mar 2012 00:19:34 UTC +00:00], ["data", "--- !map:ActiveSupport::HashWithIndifferentAccess \nfoo: bar\n"], ["expires_at", Sun, 11 Mar 2012 00:19:34 UTC +00:00], ["updated_at", Sat, 10 Mar 2012 00:19:34 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 2ms (ActiveRecord: 0.3ms)
+Processing by DummyController#get_data as HTML
+  Parameters: {"data"=>{"foo"=>"bar"}, "expires_at"=>"2012-03-11 00:19:34 UTC"}
+  [1m[35mTemporaryData Load (0.1ms)[0m  SELECT "temporary_data".* FROM "temporary_data" WHERE "temporary_data"."id" = 1 AND (expires_at > '2012-03-10 00:19:34.653546') LIMIT 1
+Completed 200 OK in 1ms (ActiveRecord: 0.1ms)
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateTemporaryData (20120309215634)
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by DummyController#set_data as HTML
+  Parameters: {"data"=>{"foo"=>"bar"}}
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.7ms)[0m  INSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Sat, 10 Mar 2012 00:19:47 UTC +00:00], ["data", "--- !map:ActiveSupport::HashWithIndifferentAccess \nfoo: bar\n"], ["expires_at", Mon, 12 Mar 2012 00:19:47 UTC +00:00], ["updated_at", Sat, 10 Mar 2012 00:19:47 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 12ms (ActiveRecord: 1.9ms)
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "temporary_data" 
+Processing by DummyController#clear_data as HTML
+  Parameters: {"data"=>{"foo"=>"bar"}}
+Completed 200 OK in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "temporary_data" [0m
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by DummyController#set_data as HTML
+  Parameters: {"data"=>{"foo"=>"bar"}, "expires_at"=>"2012-03-10 00:19:48 UTC"}
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Sat, 10 Mar 2012 00:19:47 UTC +00:00], ["data", "--- !map:ActiveSupport::HashWithIndifferentAccess \nfoo: bar\n"], ["expires_at", Sat, 10 Mar 2012 00:19:48 UTC +00:00], ["updated_at", Sat, 10 Mar 2012 00:19:47 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Completed 200 OK in 2ms (ActiveRecord: 0.3ms)
+Processing by DummyController#get_data as HTML
+  Parameters: {"data"=>{"foo"=>"bar"}, "expires_at"=>"2012-03-10 00:19:48 UTC"}
+  [1m[36mTemporaryData Load (0.1ms)[0m  [1mSELECT "temporary_data".* FROM "temporary_data" WHERE "temporary_data"."id" = 1 AND (expires_at > '2012-03-10 00:19:48.029757') LIMIT 1[0m
+Completed 200 OK in 4ms (ActiveRecord: 0.1ms)
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by DummyController#set_data as HTML
+  Parameters: {"data"=>{"foo"=>"bar"}, "expires_at"=>"2012-03-11 00:19:48 UTC"}
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Sat, 10 Mar 2012 00:19:48 UTC +00:00], ["data", "--- !map:ActiveSupport::HashWithIndifferentAccess \nfoo: bar\n"], ["expires_at", Sun, 11 Mar 2012 00:19:48 UTC +00:00], ["updated_at", Sat, 10 Mar 2012 00:19:48 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Completed 200 OK in 2ms (ActiveRecord: 0.3ms)
+Processing by DummyController#get_data as HTML
+  Parameters: {"data"=>{"foo"=>"bar"}, "expires_at"=>"2012-03-11 00:19:48 UTC"}
+  [1m[36mTemporaryData Load (0.1ms)[0m  [1mSELECT "temporary_data".* FROM "temporary_data" WHERE "temporary_data"."id" = 1 AND (expires_at > '2012-03-10 00:19:48.038732') LIMIT 1[0m
+Completed 200 OK in 1ms (ActiveRecord: 0.1ms)
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateTemporaryData (20120309215634)
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by DummyController#set_data as HTML
+  Parameters: {"data"=>{"foo"=>"bar"}}
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.7ms)[0m  INSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Sat, 10 Mar 2012 00:19:57 UTC +00:00], ["data", "--- !map:ActiveSupport::HashWithIndifferentAccess \nfoo: bar\n"], ["expires_at", Mon, 12 Mar 2012 00:19:57 UTC +00:00], ["updated_at", Sat, 10 Mar 2012 00:19:57 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 12ms (ActiveRecord: 1.9ms)
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "temporary_data" 
+Processing by DummyController#clear_data as HTML
+  Parameters: {"data"=>{"foo"=>"bar"}}
+  [1m[36mTemporaryData Load (0.1ms)[0m  [1mSELECT "temporary_data".* FROM "temporary_data" WHERE "temporary_data"."id" = 1 AND (expires_at > '2012-03-10 00:19:57.071628') LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "temporary_data" WHERE "temporary_data"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Completed 200 OK in 4ms (ActiveRecord: 0.4ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "temporary_data" [0m
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by DummyController#set_data as HTML
+  Parameters: {"data"=>{"foo"=>"bar"}, "expires_at"=>"2012-03-10 00:19:58 UTC"}
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Sat, 10 Mar 2012 00:19:57 UTC +00:00], ["data", "--- !map:ActiveSupport::HashWithIndifferentAccess \nfoo: bar\n"], ["expires_at", Sat, 10 Mar 2012 00:19:58 UTC +00:00], ["updated_at", Sat, 10 Mar 2012 00:19:57 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Completed 200 OK in 2ms (ActiveRecord: 0.3ms)
+Processing by DummyController#get_data as HTML
+  Parameters: {"data"=>{"foo"=>"bar"}, "expires_at"=>"2012-03-10 00:19:58 UTC"}
+  [1m[36mTemporaryData Load (0.1ms)[0m  [1mSELECT "temporary_data".* FROM "temporary_data" WHERE "temporary_data"."id" = 1 AND (expires_at > '2012-03-10 00:19:58.083540') LIMIT 1[0m
+Completed 200 OK in 1ms (ActiveRecord: 0.1ms)
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by DummyController#set_data as HTML
+  Parameters: {"data"=>{"foo"=>"bar"}, "expires_at"=>"2012-03-11 00:19:58 UTC"}
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "temporary_data" ("created_at", "data", "expires_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Sat, 10 Mar 2012 00:19:58 UTC +00:00], ["data", "--- !map:ActiveSupport::HashWithIndifferentAccess \nfoo: bar\n"], ["expires_at", Sun, 11 Mar 2012 00:19:58 UTC +00:00], ["updated_at", Sat, 10 Mar 2012 00:19:58 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Completed 200 OK in 2ms (ActiveRecord: 0.3ms)
+Processing by DummyController#get_data as HTML
+  Parameters: {"data"=>{"foo"=>"bar"}, "expires_at"=>"2012-03-11 00:19:58 UTC"}
+  [1m[36mTemporaryData Load (0.1ms)[0m  [1mSELECT "temporary_data".* FROM "temporary_data" WHERE "temporary_data"."id" = 1 AND (expires_at > '2012-03-10 00:19:58.089555') LIMIT 1[0m
+Completed 200 OK in 1ms (ActiveRecord: 0.1ms)
+  [1m[35m (0.5ms)[0m  rollback transaction
