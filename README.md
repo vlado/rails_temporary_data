@@ -77,5 +77,4 @@ To help you clear unwanted and/or expired data rake task is provided. You should
 TODO
 ----
 
-* Publish gem
 * Default expires_at as configuration option
