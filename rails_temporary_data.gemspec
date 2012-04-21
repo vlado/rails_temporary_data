@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.version     = RailsTemporaryData::VERSION
   s.authors     = ["Vlado Cingel"]
   s.email       = ["vladocingel@gmail.com"]
-  s.homepage    = ""
+  s.homepage    = "https://github.com/vlado/rails_temporary_data"
   s.summary     = %q{Rails engine to simply save temporary data that is too big for session in database}
   s.description = %q{Rails engine to simply save temporary data that is too big for session in database}
 
