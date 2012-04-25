@@ -32,7 +32,8 @@ Example
 --------
 
     class DummyController < ApplicationController
-
+      include RailsTemporaryData::ControllerHelpers
+      
       def set_data
         set_tmp_data("some_key", { first_name: "Vlado", last_name: "Cingel", bio: "Very ... very long bio" })
         ...
@@ -50,7 +51,8 @@ Example
 You can optionally set data expiry time (default is 2 days)
 
     class DummyController < ApplicationController
-
+      include RailsTemporaryData::ControllerHelpers
+      
       def set_data
         set_tmp_data("some_key", { bio: "Very ... very long bio" }, Time.now + 3.days)
         ...
@@ -61,7 +63,8 @@ You can optionally set data expiry time (default is 2 days)
 To clear data you don't need any more
 
     class DummyController < ApplicationController
-
+      include RailsTemporaryData::ControllerHelpers
+      
       def get_data
         tmp_data = get_tmp_data("some_key").data
         # do something with tmp data
@@ -79,3 +82,4 @@ TODO
 ----
 
 * Default expires_at as configuration option
+* Generate initializer that will make RailsTemporaryData::ControllerHelpers available to all controllers
