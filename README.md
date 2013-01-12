@@ -1,6 +1,8 @@
 RailsTemporaryData
 ==================
 
+[![Gem Version](https://badge.fury.io/rb/rails_temporary_data.png)](http://badge.fury.io/rb/rails_temporary_data)
+
 Rails engine to simply save big temporary data (too big for session cookie store) in a database. It is great for a step-by-step wizard or similar functionality.
 
 Why
