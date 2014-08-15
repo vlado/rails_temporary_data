@@ -45,6 +45,9 @@ Example
         tmp_data = get_tmp_data("some_key").data
         # do something with tmp data
         first_name = tmp_data[:first_name] # => Vlado
+        # and you can update tmp data
+        tmp_data[:first_name] = "Max" # => Max
+        update_tmp_data("some_key", tmp_data) # => { first_name: "Max", last_name: "Cingel", bio: "Very ... very long bio" }
         ...
       end
 
