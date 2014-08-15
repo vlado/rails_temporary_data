@@ -55,7 +55,6 @@ Example
         # and then save changes (update tmp data)
         update_tmp_data("some_key", tmp_data) # => { first_name: "Max", last_name: "Cingel", bio: "Very ... very long bio" }
         ...
-
       end
 
     end
