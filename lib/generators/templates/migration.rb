@@ -1,4 +1,4 @@
-class CreateTemporaryData < ActiveRecord::Migration
+class CreateTemporaryData < ActiveRecord::Migration[5.0]
   def change
     create_table :temporary_data do |t|
       t.text :data
