@@ -25,7 +25,7 @@ module RailsTemporaryData
         TemporaryData.unexpired.find_by(key: key)
       end
       session[key] = nil if use_session
-      tmp_data.destroy if tmp_data
+      tmp_data.delete if tmp_data
     end
 
     def update_tmp_data(key, data, use_session = false)
